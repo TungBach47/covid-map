@@ -1,95 +1,5 @@
-import React, { Component } from "react"
+import React, { Component, useState } from "react"
 import { Line } from 'react-chartjs-2';
-
-const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [
-      {
-        label: 'My First dataset',
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
-        pointBorderColor: 'rgba(75,192,192,1)',
-        pointBackgroundColor: '#fff',
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        pointHoverBorderColor: 'rgba(220,220,220,1)',
-        pointHoverBorderWidth: 2,
-        pointRadius: 1,
-        pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'My First dataset',
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
-        pointBorderColor: 'rgba(75,192,192,1)',
-        pointBackgroundColor: '#fff',
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        pointHoverBorderColor: 'rgba(220,220,220,1)',
-        pointHoverBorderWidth: 2,
-        pointRadius: 1,
-        pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'My First dataset',
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
-        pointBorderColor: 'rgba(75,192,192,1)',
-        pointBackgroundColor: '#fff',
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        pointHoverBorderColor: 'rgba(220,220,220,1)',
-        pointHoverBorderWidth: 2,
-        pointRadius: 1,
-        pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
-      },
-      {
-        label: 'My First dataset',
-        fill: false,
-        lineTension: 0.1,
-        backgroundColor: 'rgba(75,192,192,0.4)',
-        borderColor: 'rgba(75,192,192,1)',
-        borderCapStyle: 'butt',
-        borderDash: [],
-        borderDashOffset: 0.0,
-        borderJoinStyle: 'miter',
-        pointBorderColor: 'rgba(75,192,192,1)',
-        pointBackgroundColor: '#fff',
-        pointBorderWidth: 1,
-        pointHoverRadius: 5,
-        pointHoverBackgroundColor: 'rgba(75,192,192,1)',
-        pointHoverBorderColor: 'rgba(220,220,220,1)',
-        pointHoverBorderWidth: 2,
-        pointRadius: 1,
-        pointHitRadius: 10,
-        data: [65, 59, 80, 81, 56, 55, 40]
-      }
-    ]
-  };
 
 class Chart extends Component {
 
@@ -108,10 +18,10 @@ class Chart extends Component {
         fetch('https://td.fpt.ai/corona/corona-chart-vn.json')
         .then(res => res.json())
         .then((json) => {
-            this.setState({labels: Object.keys(json)});
-            this.setState({infected: Object.values(json)[0]});
-            
-
+            let values = Object.values(json);
+            for (let i=0; i<values.lenght; i++) {
+                console.log(values[i])
+            }
 
         });
     }
@@ -130,5 +40,44 @@ class Chart extends Component {
         )
     }
 }
+
+
+// const Chart = () => {
+
+//     const [chartData, setChartData] = useState({})
+
+//     const vnlabels = []
+//     const infected = []
+//     const suspected = []
+//     const recover = []
+
+
+//     fetch("https://td.fpt.ai/corona/corona-chart-vn.json")
+//     .then(res => res.json() )
+//     .then((json) => {
+//         vnlabels = Object.keys(json)
+//         let values = Object.values(json)
+//         for (let i=0; i<values.length; i++) {
+//             console.log()
+//         }  
+
+
+        
+//     })
+
+
+//     const vnchart = () => {
+//         setChartData({
+//             labels: vnlabels
+//         })
+//     }
+    
+
+//     return (
+//         <div>
+//             <Line/>
+//         </div>
+//     )
+// }
 
 export default Chart;
