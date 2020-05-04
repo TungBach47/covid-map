@@ -3,6 +3,14 @@ import './App.css';
 import PatientList from './Components/PatientList/PatientList';
 import SliderBar from './Components/SliderBar/SliderBar';
 import CovidMap from './Components/CovidMap/CovidMap';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
+import Chart from "./Components/Chart/Chart"
 
 class App extends Component {
 
@@ -83,11 +91,27 @@ class App extends Component {
 
     render() {
         return (
-            <div className="container">
-                <CovidMap data={this.state.patientsDisplay}/>
-                <PatientList data={this.state.patientsDisplay}/>
-                <SliderBar onChange={this.updateSelectDate} selectedDate={this.state.selectedDate} playSlider={this.playSlider} pauseSlider ={this.pauseSlider}/>
-            </div>
+            <Router>
+                <Link to="/map">
+                    <button> Map </button>
+                </Link>
+                <Link to="/stats">
+                    <button> Stats </button>
+                </Link>
+
+                <Switch>
+                    <Route path="/map">
+                        <div className="container">
+                            <CovidMap data={this.state.patientsDisplay}/>
+                            <PatientList data={this.state.patientsDisplay}/>
+                            <SliderBar onChange={this.updateSelectDate} selectedDate={this.state.selectedDate} playSlider={this.playSlider} pauseSlider ={this.pauseSlider}/>
+                        </div>
+                    </Route>
+                    <Route path="/stats">
+                        <Chart/>
+                    </Route>
+                </Switch>
+            </Router>
         );
     }
 }
