@@ -1,0 +1,20 @@
+.slider {
+    position: absolute;
+    width: 80%;
+    top: 650px;
+    right: 150px;
+}
+
+.date-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    position: relative;
+}
+
+#play-button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 650px;
+    right: 150px;
+}

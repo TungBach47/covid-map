@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css';
+import "./CovidMap.css"
 
 import L from 'leaflet';
 
@@ -13,23 +14,7 @@ L.Icon.Default.mergeOptions({
 });
 
 
-
-
 class CovidMap extends Component {
-    // constructor(props){
-    //     super(props);
-    //     this.state = {
-    //     };
-    // }
-
-// componentWillMount(){}
-//    componentDidMount(){}
-// componentWillUnmount(){}
-
-// componentWillReceiveProps(){}
-// shouldComponentUpdate(){}
-// componentWillUpdate(){}
-// componentDidUpdate(){}
     renderMarker = (list) => {
         return (list.map((item, index) => (
             <Marker position={[item.lat, item.lng]} key={index} >

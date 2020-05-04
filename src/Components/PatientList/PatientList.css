@@ -1,0 +1,7 @@
+.list {
+    width: 30%;
+    height: 600px;
+    overflow-y: scroll;
+    position: absolute;
+    left: 1050px;
+}

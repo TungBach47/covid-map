@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import ListPatients from './Components/ListPatients/ListPatients';
-import SeekBar from './Components/SeekBar/SeekBar';
+import PatientList from './Components/PatientList/PatientList';
+import SliderBar from './Components/SliderBar/SliderBar';
 import CovidMap from './Components/CovidMap/CovidMap';
 
 class App extends Component {
@@ -85,8 +85,8 @@ class App extends Component {
         return (
             <div className="container">
                 <CovidMap data={this.state.patientsDisplay}/>
-                <ListPatients data={this.state.patientsDisplay}/>
-                <SeekBar onChange={this.updateSelectDate} selectedDate={this.state.selectedDate} playSlider={this.playSlider} pauseSlider ={this.pauseSlider}/>
+                <PatientList data={this.state.patientsDisplay}/>
+                <SliderBar onChange={this.updateSelectDate} selectedDate={this.state.selectedDate} playSlider={this.playSlider} pauseSlider ={this.pauseSlider}/>
             </div>
         );
     }

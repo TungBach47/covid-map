@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Patient from '../Patient/Patient';
+import "./PatientList.css"
 
 
 

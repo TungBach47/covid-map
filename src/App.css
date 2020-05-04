@@ -38,43 +38,8 @@
     margin: .6em 0 0;
 }
 
-.list-item {
-    width: 90%;
-    text-align: left;
-    font-size: medium;
-    padding: 10px;
-    background-color: #263238;
-    color: aliceblue;
-    border-radius: .4em;
-    margin-top: 10px;
-}
-
-.list {
-    width: 30%;
-    height: 600px;
-    overflow-y: scroll;
-    position: absolute;
-    left: 1050px;
-}
-
-#map{
-    position: absolute;
-}
-
 .container{
     position: relative;
 }
-.seekbar-layout {
-    position: absolute;
-    width: 80%;
-    top: 650px;
-    right: 150px;
-}
 
-#play-button {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 650px;
-    right: 150px;
-}
+

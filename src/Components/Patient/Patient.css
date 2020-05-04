@@ -1,0 +1,12 @@
+.list-item {
+    width: 90%;
+    text-align: left;
+    font-size: medium;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 3px solid black;
+    color: black;
+    border-radius: .4em;
+    margin-top: 10px;
+    list-style: none;
+}
