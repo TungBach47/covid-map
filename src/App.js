@@ -93,10 +93,10 @@ class App extends Component {
         return (
             <Router>
                 <Link to="/map">
-                    <button> Map </button>
+                    <button className="map-btn"> Map </button>
                 </Link>
                 <Link to="/stats">
-                    <button> Stats </button>
+                    <button className="stats-btn"> Stats </button>
                 </Link>
 
                 <Switch>
