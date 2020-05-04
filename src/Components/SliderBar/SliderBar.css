@@ -12,6 +12,7 @@
     margin-left: 200px;
     margin-bottom: 3px;
     width: fit-content;
+    align-items: center;
 }
 
 .play-btn {

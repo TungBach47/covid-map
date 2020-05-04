@@ -16,7 +16,7 @@ class SliderBar extends Component {
             <div className="slider">
                 <button className="play-btn" onClick={this.props.playSlider}>Play</button>
                 <button className="pause-btn" onClick={this.props.pauseSlider}>Pause</button>
-                <div className="date-title">{this.formatDate(this.props.selectedDate)}</div>
+                <text className="date-title">{this.formatDate(this.props.selectedDate)}</text>
                 <Slider
                     min={Date.parse("08/12/2019")}
                     max={Date.parse(new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()))}

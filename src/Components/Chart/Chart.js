@@ -125,8 +125,14 @@ class Chart extends Component {
                             title: {
                                 display: true,
                                 text: "Vietnam Covid19 Line Chart",
-                                fontSize: 16,
+                                fontSize: 20,
                                 fontFamily: 'Arial',
+                            },
+                            legend: {
+                                labels: {
+                                    fontFamily: "Arial",
+                                    fontSize: 16
+                                }
                             }
                         }}
                     />   
@@ -138,8 +144,14 @@ class Chart extends Component {
                             title: {
                                 display: true,
                                 text: "World Covid19 Line Chart",
-                                fontSize: 16,
+                                fontSize: 20,
                                 fontFamily: 'Arial',
+                            },
+                            legend: {
+                                labels: {
+                                    fontFamily: "Arial",
+                                    fontSize: 16
+                                }
                             }
                         }}
                         />
