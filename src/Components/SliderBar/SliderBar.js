@@ -14,8 +14,8 @@ class SliderBar extends Component {
     render() {
         return (
             <div className="slider">
-                <button onClick={this.props.playSlider}>Play</button>
-                <button onClick={this.props.pauseSlider}>Pause</button>
+                <button className="play-btn" onClick={this.props.playSlider}>Play</button>
+                <button className="pause-btn" onClick={this.props.pauseSlider}>Pause</button>
                 <div className="date-title">{this.formatDate(this.props.selectedDate)}</div>
                 <Slider
                     min={Date.parse("08/12/2019")}

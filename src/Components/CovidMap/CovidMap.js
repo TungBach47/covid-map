@@ -18,8 +18,8 @@ class CovidMap extends Component {
     renderMarker = (list) => {
         return (list.map((item, index) => (
             <Marker position={[item.lat, item.lng]} key={index} >
-                <Popup>
-                    <ul>
+                <Popup closeButton={false} maxWidth={200}>
+                    <ul className="patient-info">
                         <li><strong>Tên:</strong> {item.name}</li>
                         <li><strong>Địa chỉ:</strong> {item.address}</li>
                         <li><strong>Thời gian:</strong> {item.verifyDate}</li>

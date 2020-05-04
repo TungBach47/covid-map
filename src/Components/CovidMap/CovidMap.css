@@ -1,3 +1,12 @@
 #map{
     position: absolute;
 }
+
+
+ul.patient-info {
+    list-style-type: none;
+    font-family: Arial, Helvetica, sans-serif;
+    background: azure;
+    align-items: center;
+    padding: 2px;
+}

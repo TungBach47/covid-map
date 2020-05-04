@@ -9,12 +9,34 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     position: relative;
+    margin-left: 200px;
+    margin-bottom: 3px;
+    width: fit-content;
 }
 
-#play-button {
-    position: absolute;
-    width: 30px;
+.play-btn {
+    width: 80px;
     height: 30px;
-    top: 650px;
-    right: 150px;
+    background-color: #00AFF0;
+    border: none;
+    margin: 10px;
+    color: azure;
+    font-size: 18px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}:active {
+    color: black;
+}
+
+.pause-btn {
+    width: 80px;
+    height: 30px;
+    background-color: #00AFF0;
+    border: none;
+    color: azure;
+    font-size: 18px;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}:active {
+    color: black;
 }
