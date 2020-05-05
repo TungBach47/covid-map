@@ -44,21 +44,16 @@ class App extends Component {
         }
     }
 
-// componentWillMount(){}
-
     componentWillUnmount(){
         clearInterval(this.interval);
     }
 
-// componentWillReceiveProps(){}
-// shouldComponentUpdate(){}
-// componentWillUpdate(){}
-// componentDidUpdate(){}
     componentDidMount(){
         fetch('https://cors-anywhere.herokuapp.com/https://maps.vnpost.vn/apps/covid19/api/patientapi/list')
         .then(res => res.json())
         .then((json, tmp) => {
             tmp = json.data;
+            console.log(json);
             tmp.sort(function (a, b){
                 return Date.parse(b.verifyDate) - Date.parse(a.verifyDate);
             });
@@ -67,7 +62,7 @@ class App extends Component {
         this.interval = setInterval(() => this.tick(), 500);
     }
 
-    updateSelectDate = (newDate) => {
+    updateSelectedDate = (newDate) => {
         this.setState({selectedDate: newDate});
         this.state.patientsDisplay = [];
         this.state.patients.map((item) => {
@@ -104,7 +99,7 @@ class App extends Component {
                         <div className="container">
                             <CovidMap data={this.state.patientsDisplay}/>
                             <PatientList data={this.state.patientsDisplay}/>
-                            <SliderBar onChange={this.updateSelectDate} selectedDate={this.state.selectedDate} playSlider={this.playSlider} pauseSlider ={this.pauseSlider}/>
+                            <SliderBar onChange={this.updateSelectedDate} selectedDate={this.state.selectedDate} playSlider={this.playSlider} pauseSlider ={this.pauseSlider}/>
                         </div>
                     </Route>
                     <Route path="/stats">

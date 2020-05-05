@@ -1,8 +1,7 @@
-import React, { Component, useState } from "react"
+import React, { Component } from "react"
 import { Line } from 'react-chartjs-2';
 
 class Chart extends Component {
-
     constructor(props) {
         super(props);
         this.state = {
@@ -10,7 +9,6 @@ class Chart extends Component {
             chartDataWorld: Object
             }
         }
-
 
     componentDidMount(){
         //Vietnam data api fetch
@@ -31,9 +29,7 @@ class Chart extends Component {
             values.map(item => {
                 infected.push(item[0]);
                 suspected.push(item[1]);
-                recovered.push(item[2]);
-
-
+                recovered.push(item[2])
             });
 
             let chartDataVN = {
@@ -78,7 +74,7 @@ class Chart extends Component {
             values.map(item => {
                 infected.push(item[0]);
                 death.push(item[1]);
-                cured.push(item[2]);
+                cured.push(item[2])
             })
 
             let chartDataWorld = {
@@ -110,10 +106,6 @@ class Chart extends Component {
             this.setState({chartDataWorld})
         })
     }
-
-
-
- 
 
     render () {
         return (

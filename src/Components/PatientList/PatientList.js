@@ -12,16 +12,6 @@ class ListPatients extends Component {
         };
     }
 
-    // componentWillMount(){}
-    // componentWillUnmount(){}
-
-    // componentWillReceiveProps(){}
-    // shouldComponentUpdate(){}
-    // componentWillUpdate(){}
-    // componentDidUpdate(){}
-
-    
-
     render() {
         return (
             <div className="list">

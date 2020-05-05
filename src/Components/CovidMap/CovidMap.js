@@ -32,7 +32,7 @@ class CovidMap extends Component {
 
     render() {
         return (
-            <Map center={[16, 106]} zoom={6} style={{ width: '1000px', height: '600px'}} id="map">
+            <Map center={[16.30748653, 106.90136746]} zoom={6} style={{ width: '1000px', height: '600px'}} className="map">
                 <TileLayer
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
